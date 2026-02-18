@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Tales de Mileto",
+    "periodo": "Antiguidade",
+    "contribuicao": "Observou a eletricidade estática no âmbar."
+  },
+  {
+    "nome": "William Gilbert",
+    "periodo": "Século XVI",
+    "contribuicao": "Fundador do estudo científico do magnetismo."
+  },
+  {
+    "nome": "Faraday",
+    "periodo": "Século XIX",
+    "contribuicao": "Descobriu a indução eletromagnética."
+  },
+  {
+    "nome": "Maxwell",
+    "periodo": "Século XIX",
+    "contribuicao": "Unificou eletricidade, magnetismo e luz."
+  }
+]
