@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 | Carga Elétrica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020503] text-green-50 font-['Space+Grotesk'] overflow-x-hidden">
+    <canvas id="mechanicsCanvas" class="fixed top-0 left-0 -z-10"></canvas>
+    
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-black/60 backdrop-blur-xl border-b-2 border-green-500/30">
+        <a href="index.html" class="text-green-500 font-['Syncopate'] uppercase text-xs hover:text-white transition">← Home</a>
+        <div class="h-1 w-32 bg-green-900 rounded-full overflow-hidden hidden md:block">
+            <div class="h-full bg-green-500 w-[33%] shadow-[0_0_10px_#22c55e]"></div>
+        </div>
+        <span class="text-[10px] tracking-[0.4em] uppercase text-green-500/50">Módulo 01 / 03</span>
+    </nav>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-32">
+        <h1 class="text-4xl md:text-6xl font-['Syncopate'] title-neon uppercase mb-16">Carga Elétrica</h1>
+
+        <section class="glass-neon p-10 rounded-[3rem] border-[4px] border-green-500/50 mb-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl text-green-400 font-bold mb-6 italic uppercase">A Natureza da Carga</h2>
+                    <p class="text-xl leading-relaxed text-justify mb-6">
+                        A carga elétrica é uma propriedade fundamental da matéria responsável pelas interações elétricas. Existem dois tipos de cargas: <b>positiva</b> e <b>negativa</b>. Cargas de mesmo sinal se repelem, enquanto cargas de sinais opostos se atraem. A unidade de carga no SI é o <b>coulomb (C)</b>.
+                    </p>
+                </div>
+                <div class="rounded-3xl border-4 border-green-500/40 overflow-hidden shadow-2xl">
+                    <img src="fotos/atracao_repulsao.jpg" class="w-full hover:scale-110 transition duration-700" alt="Atração e Repulsão">
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-blue p-10 rounded-[3rem] border-[4px] border-blue-500/60 mb-12">
+            <h2 class="text-3xl text-blue-400 font-bold mb-10 uppercase text-center">Materiais Condutores e Isolantes</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black/40 p-6 rounded-2xl border border-blue-500/30">
+                    <img src="fotos/condutores.jpg" class="w-full h-40 object-cover rounded-xl mb-4 border border-blue-500/50">
+                    <p class="text-sm"><b>Condutores:</b> permitem o movimento livre de elétrons. Ex: metais como cobre e alumínio.</p>
+                </div>
+                <div class="bg-black/40 p-6 rounded-2xl border border-red-500/30">
+                    <img src="fotos/isolantes.jpg" class="w-full h-40 object-cover rounded-xl mb-4 border border-red-500/50">
+                    <p class="text-sm"><b>Isolantes:</b> dificultam o movimento de elétrons. Ex: borracha e vidro.</p>
+                </div>
+                <div class="bg-black/40 p-6 rounded-2xl border border-yellow-500/30">
+                    <img src="fotos/semicondutores.jpg" class="w-full h-40 object-cover rounded-xl mb-4 border border-yellow-500/50">
+                    <p class="text-sm"><b>Semicondutores:</b> comportamento intermediário. Ex: silício.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-neon p-10 rounded-[3rem] border-[4px] border-green-500/50">
+            <h2 class="text-3xl text-green-400 font-bold mb-8 uppercase italic">Quantização da Carga</h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-3xl border-4 border-green-500 shadow-[0_0_30px_rgba(34,197,94,0.3)] overflow-hidden">
+                    <img src="fotos/quantizacao.jpg" class="w-full">
+                </div>
+                <div class="space-y-6">
+                    <p class="text-xl">A carga é sempre um múltiplo inteiro da carga elementar (e).</p>
+                    <div class="p-6 bg-black/60 border-l-8 border-green-500 rounded-xl">
+                        <p class="text-2xl font-mono text-white">e = 1,6 × 10⁻¹⁹ C</p>
+                        <p class="text-3xl font-bold text-green-500 mt-2">Q = n × e</p>
+                    </div>
+                    <p class="opacity-70 italic">onde n é um número inteiro.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-20 flex justify-end">
+            <a href="pagina2.html" class="px-16 py-6 bg-green-600 rounded-full font-bold text-lg hover:scale-105 transition shadow-[0_0_30px_rgba(34,197,94,0.5)]">Próxima Aula →</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

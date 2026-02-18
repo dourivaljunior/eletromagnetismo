@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 | Dinâmica Elétrica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020503] text-green-50 font-['Space+Grotesk'] overflow-x-hidden">
+    <canvas id="mechanicsCanvas" class="fixed top-0 left-0 -z-10"></canvas>
+    
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-black/60 backdrop-blur-xl border-b-2 border-green-500/30">
+        <a href="pagina2.html" class="text-green-500 font-['Syncopate'] uppercase text-xs">← Módulo 02</a>
+        <div class="h-1 w-32 bg-green-900 rounded-full overflow-hidden hidden md:block">
+            <div class="h-full bg-green-500 w-[75%] shadow-[0_0_10px_#22c55e]"></div>
+        </div>
+        <span class="text-xs font-bold text-green-500 uppercase tracking-widest">Módulo 03 / 04</span>
+    </nav>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-32">
+        <h1 class="text-4xl md:text-6xl font-['Syncopate'] title-neon uppercase mb-16">Dinâmica Elétrica</h1>
+
+        <div class="grid lg:grid-cols-2 gap-10 mb-16">
+            <div class="glass-neon p-10 rounded-[3rem] border-[4px] border-green-500/50">
+                <h2 class="text-2xl text-green-400 font-bold mb-6 uppercase tracking-tighter">Potencial & ddp (Volts) </h2>
+                <div class="rounded-2xl border-2 border-green-500/20 overflow-hidden mb-6">
+                    <img src="fotos/pilha.jpg" class="w-full h-48 object-cover">
+                </div>
+                <p class="text-lg opacity-90 text-justify">O potencial elétrico (V) é a energia potencial por unidade de carga (V = U / q). 
+A diferença de potencial (ddp) é a "força eletromotriz" que impulsiona as cargas elétricas em um circuito.</p>
+            </div>
+
+            <div class="glass-blue p-10 rounded-[3rem] border-[4px] border-blue-500/60">
+                <h2 class="text-2xl text-blue-400 font-bold mb-6 uppercase tracking-tighter">Corrente Elétrica (Amperes)</h2>
+                <div class="rounded-2xl border-2 border-blue-500/20 overflow-hidden mb-6">
+                    <img src="fotos/corrente.jpg" class="w-full h-48 object-cover">
+                </div>
+                <p class="text-lg opacity-90 text-justify">Fluxo ordenado de cargas elétricas em um condutor. <b>i = ΔQ / Δt</b>. A unidade é o ampère (A).</p>
+            </div>
+        </div>
+
+        <section class="glass-neon p-10 rounded-[3rem] border-[4px] border-green-500/50 mb-16">
+            <h2 class="text-3xl text-green-400 font-bold mb-10 text-center uppercase italic">Corrente Contínua vs Alternada</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-4">
+                    <div class="p-6 bg-black/40 rounded-2xl border-l-8 border-blue-500">
+                        <h3 class="text-xl font-bold text-blue-400 uppercase">Contínua (CC)</h3>
+                        <p class="text-xs mt-2">Cargas em sentido único. Ex: Pilhas e Baterias.</p>
+                    </div>
+                    <img src="fotos/cc.jpg" class="w-full rounded-xl border border-blue-500/20">
+                </div>
+                <div class="space-y-4">
+                    <div class="p-6 bg-black/40 rounded-2xl border-l-8 border-red-500">
+                        <h3 class="text-xl font-bold text-red-500 uppercase">Alternada (CA)</h3>
+                        <p class="text-xs mt-2">Sentido inverte periodicamente. Ex: Redes residenciais.</p>
+                    </div>
+                    <img src="fotos/correntes.gif" class="w-full rounded-xl border border-red-500/20">
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center pt-20">
+            <a href="pagina4.html" class="inline-block px-16 py-8 bg-gradient-to-r from-green-600 to-blue-600 text-white font-['Syncopate'] text-xl rounded-full hover:scale-110 hover:shadow-[0_0_60px_rgba(34,197,94,0.6)] transition-all duration-500 uppercase tracking-widest">
+                Avançar: Titãs da Física →
+            </a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

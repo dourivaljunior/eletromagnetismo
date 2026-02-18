@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 | Titãs da Eletricidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animação de Pulsar Neon para os quadros */
+        @keyframes pulse-neon {
+            0% { box-shadow: 0 0 10px rgba(var(--color), 0.2); }
+            50% { box-shadow: 0 0 30px rgba(var(--color), 0.5); }
+            100% { box-shadow: 0 0 10px rgba(var(--color), 0.2); }
+        }
+        .energy-card {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: pulse-neon 3s infinite;
+        }
+        .energy-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body class="bg-[#010402] text-white font-['Space+Grotesk'] overflow-x-hidden">
+    <canvas id="mechanicsCanvas" class="fixed top-0 left-0 -z-10"></canvas>
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b-2 border-white/10">
+        <a href="pagina3.html" class="text-white/50 font-['Syncopate'] uppercase text-[10px] hover:text-white transition tracking-[0.3em]">← Anterior</a>
+        <div class="h-1 w-64 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-red-500 w-full shadow-[0_0_15px_#fff]"></div>
+        </div>
+        <span class="text-[10px] font-bold text-white uppercase tracking-[0.3em]">Módulo 04 / Final</span>
+    </nav>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-32">
+        <header class="text-center mb-24">
+            <h1 class="text-5xl md:text-8xl font-['Syncopate'] title-neon uppercase mb-6 leading-none">Grandes <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">Invenções</span></h1>
+            <p class="text-white/40 tracking-[0.5em] uppercase text-xs">A ciência que moldou o relâmpago</p>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <section class="energy-card group p-8 rounded-[2.5rem] bg-black/40 border-2 border-cyan-500/30 backdrop-blur-xl" style="--color: 6, 182, 212;">
+                <h2 class="text-3xl font-['Syncopate'] text-cyan-400 mb-6 group-hover:tracking-widest transition-all">O Para-Raios (1752)</h2>
+                <div class="rounded-2xl border border-cyan-500/20 overflow-hidden mb-8 h-60">
+                    <img src="fotos/pararaiodefranklin.gif" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                </div>
+                <p class="text-cyan-50/70 leading-relaxed text-justify">
+                    Benjamin Franklin, em seu famoso experimento com a pipa durante uma tempestade, provou que o raio é uma descarga elétrica da natureza. Em 1752, essa descoberta levou à invenção do <b>para-raios</b>, um dispositivo que oferece um caminho seguro para a eletricidade atmosférica até o solo. Franklin revolucionou a ciência ao introduzir conceitos como carga positiva e negativa, protegendo edifícios e salvando inúmeras vidas ao domar o poder do céu.
+                </p>
+            </section>
+
+            <section class="energy-card group p-8 rounded-[2.5rem] bg-black/40 border-2 border-purple-500/30 backdrop-blur-xl" style="--color: 168, 85, 247;">
+                <h2 class="text-3xl font-['Syncopate'] text-purple-400 mb-6 group-hover:tracking-widest transition-all">Gaiola de Faraday (1836)</h2>
+                <div class="rounded-2xl border border-purple-500/20 overflow-hidden mb-8 h-60">
+                    <img src="fotos/gaioladefaraday.gif" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                </div>
+                <p class="text-purple-50/70 leading-relaxed text-justify">
+                    Michael Faraday demonstrou que uma superfície condutora eletrizada possui campo elétrico nulo em seu interior, pois as cargas se distribuem na parte externa. A <b>Gaiola de Faraday</b>, criada em 1836, é o princípio que nos mantém seguros dentro de aviões ou carros durante tempestades. O experimento é o pilar da blindagem eletrostática, essencial hoje para proteger equipamentos eletrônicos sensíveis contra interferências externas.
+                </p>
+            </section>
+
+            <section class="energy-card group p-8 rounded-[2.5rem] bg-black/40 border-2 border-yellow-500/30 backdrop-blur-xl" style="--color: 234, 179, 8;">
+                <h2 class="text-3xl font-['Syncopate'] text-yellow-400 mb-6 group-hover:tracking-widest transition-all">Gerador Van de Graaff (1929)</h2>
+                <div class="rounded-2xl border border-yellow-500/20 overflow-hidden mb-8 h-60">
+                    <img src="fotos/vandegraff.gif" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                </div>
+                <p class="text-yellow-50/70 leading-relaxed text-justify">
+                    Desenvolvido pelo físico Robert Van de Graaff, este gerador utiliza uma correia isolante em movimento para acumular enormes quantidades de carga elétrica em uma cúpula metálica oca. Capaz de gerar milhões de volts, foi fundamental para os primeiros aceleradores de partículas. No ensino de física, é famoso por deixar cabelos em pé, ilustrando de forma visceral a repulsão de cargas e o poder da alta tensão acumulada.
+                </p>
+            </section>
+
+            <section class="energy-card group p-8 rounded-[2.5rem] bg-black/40 border-2 border-red-500/30 backdrop-blur-xl" style="--color: 239, 68, 68;">
+                <h2 class="text-3xl font-['Syncopate'] text-red-400 mb-6 group-hover:tracking-widest transition-all">Bobina de Tesla (1891)</h2>
+                <div class="rounded-2xl border border-red-500/20 overflow-hidden mb-8 h-60">
+                    <img src="fotos/bobinadetesla.gif" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                </div>
+                <p class="text-red-50/70 leading-relaxed text-justify">
+                    Nikola Tesla sonhava em transmitir energia sem fios. Sua <b>Bobina de Tesla</b>, de 1891, é um transformador ressonante capaz de produzir tensões altíssimas e correntes alternadas de alta frequência. Visualmente espetacular, ela gera faíscas que cortam o ar como raios artificiais. Além do show visual, sua tecnologia abriu portas para a transmissão de rádio, televisão e tecnologias de comunicação sem fio que definem o nosso mundo moderno.
+                </p>
+            </section>
+
+        </div>
+
+        <div class="mt-32 text-center">
+            <a href="index.html" class="px-20 py-10 bg-white text-black font-['Syncopate'] text-2xl rounded-full hover:bg-cyan-500 hover:text-white hover:shadow-[0_0_100px_rgba(6,182,212,0.8)] transition-all duration-700 uppercase">Finalizar Experiência</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletromagnetismo | Prof. Dourival Júnior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020503] text-green-50 font-['Space+Grotesk'] overflow-x-hidden">
+
+    <canvas id="mechanicsCanvas"></canvas>
+
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center text-center z-10 px-6 pt-20">
+        <h1 class="text-3xl md:text-5xl lg:text-7xl font-['Syncopate'] uppercase title-neon leading-tight">Eletromagnetismo</h1>
+        <h2 class="text-lg tracking-[0.6em] text-green-500 font-bold mt-4 uppercase">Prof. Dourival Júnior</h2>
+        <div class="z-20 mt-8">
+    <a href="pagina1.html" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-green-500 rounded-full hover:bg-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:shadow-[0_0_30px_rgba(34,197,94,0.8)]">
+        <span class="mr-3 font-['Syncopate'] uppercase tracking-widest">Acessar Material de Aula</span>
+        <svg class="w-6 h-6 transition-transform duration-200 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+    </a>
+</div>
+        <div class="max-w-5xl mt-10 glass-blue p-10 rounded-[2rem] border-[4px] border-blue-500/60 shadow-[0_0_30px_rgba(59,130,246,0.3)] text-justify">
+            <h3 class="text-blue-400 font-['Syncopate'] text-xl mb-4 text-center">INTRODUÇÃO</h3>
+            <p class="text-lg md:text-xl leading-relaxed text-blue-50 font-medium">
+                A história da eletricidade e do magnetismo é uma construção coletiva que evoluiu atravessando 
+milênios. De observações simples da eletriziação com âmbar e da bússola com o mineral magnetita 
+até equações sofisticadas e tecnologias digitais, o eletromagnetismo molda o mundo moderno, 
+sendo essencial para a ciência, a engenharia e a vida cotidiana. </p>
+<p class="text-lg md:text-xl leading-relaxed text-blue-50 font-medium">
+Dia a dia estamos conectados com aplicações práticas dos diversos fenômenos do eletromagnetismo como; 
+os circuitos eletrônicos dos computadores, os aparelhos eletro-eletrônicos (ventilador, geladeira, forno microondas, 
+liquidificador, smartv, dentre outros), os motores elétricos e transformadores, 
+aparelho de raio-X e de ressonância, dentre inúmeras aplicações que podemos citar.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mt-8 glass-neon p-8 rounded-[2.5rem] border-[4px] border-green-500/50 relative overflow-hidden transition-all duration-700" id="historia-quadro">
+            <div class="flex justify-between items-center cursor-pointer" onclick="toggleHistoria()">
+                <h3 class="text-green-400 font-['Syncopate'] text-xl uppercase tracking-widest">Evolução Histórica da Eletricidade</h3>
+                <div id="expand-btn" class="w-12 h-12 rounded-full border-2 border-green-500 flex items-center justify-center transition-transform duration-500">
+                    <span class="text-2xl font-bold">↓</span>
+                </div>
+            </div>
+            
+		<div class="bg-black/40 p-4 rounded-xl border-2 border-green-500/30">
+                    <audio controls class="w-full h-12"><source src="audio/introducao.mp3"></audio>
+                </div>
+
+            <div id="historia-conteudo" class="hidden mt-8 opacity-0 transition-opacity duration-700">
+                <p class="text-lg md:text-xl leading-relaxed text-green-50 font-light italic text-justify mb-8">
+                    A história da eletricidade e do magnetismo começa na Grécia Antiga com Tales de Mileto, que no século VI antes de Cristo observou que o âmbar atritado atraía pequenos objetos e que certas pedras naturais, como a magnetita, exerciam forças invisíveis. Séculos depois, no início da ciência moderna, William Gilbert, na Inglaterra, diferenciou eletricidade e magnetismo e mostrou que a Terra se comporta como um grande ímã, estabelecendo bases experimentais para esses estudos. No século XVII, Otto von Guericke, na Alemanha, construiu uma das primeiras máquinas eletrostáticas, demonstrando que corpos eletrizados podem atrair e repelir. Já no século XVIII, Stephen Gray, também na Inglaterra, descobriu que a eletricidade pode ser conduzida por alguns materiais e bloqueada por outros, introduzindo os conceitos de condutores e isolantes. Nesse mesmo período, Benjamin Franklin, nos Estados Unidos, demonstrou que os raios são fenômenos elétricos, introduziu as ideias de cargas positivas e negativas e criou o para-raios, aproximando a eletricidade da vida prática. Pouco depois, na Itália, Luigi Galvani observou a contração de músculos de rãs por estímulos elétricos, iniciando os estudos da bioeletricidade, enquanto Alessandro Volta explicou esses fenômenos por meio do contato entre metais e inventou a pilha elétrica, a primeira fonte contínua de corrente. No final do século XVIII, Charles-Augustin de Coulomb, na França, formulou a lei que descreve matematicamente a força entre cargas elétricas, dando rigor quantitativo à eletricidade. Em 1820, o dinamarquês Hans Christian Ørsted descobriu que correntes elétricas geram campos magnéticos, unificando dois fenômenos até então separados. Logo depois, André-Marie Ampère, na França, desenvolveu as leis que descrevem a interação entre correntes elétricas, estabelecendo as bases do eletromagnetismo. Na Alemanha, Georg Simon Ohm formulou a relação entre tensão, corrente e resistência elétrica, fundamental para a análise de circuitos. Na Inglaterra, Michael Faraday descobriu a indução eletromagnética, mostrando que campos magnéticos variáveis produzem corrente elétrica, abrindo caminho para geradores e transformadores. Complementando Faraday, Heinrich Lenz, na Rússia, formulou a lei que determina o sentido da corrente induzida, garantindo a conservação da energia nos fenômenos eletromagnéticos. Em seguida, James Clerk Maxwell, na Escócia, unificou eletricidade, magnetismo e luz em um único conjunto de equações, demonstrando que a luz é uma onda eletromagnética. No final do século XIX, Heinrich Hertz, na Alemanha, comprovou experimentalmente a existência dessas ondas, confirmando as previsões de Maxwell. Aplicando esse conhecimento, Guglielmo Marconi desenvolveu o telégrafo sem fio, dando origem ao rádio e às comunicações modernas. Paralelamente, Nikola Tesla, atuando principalmente nos Estados Unidos, desenvolveu o sistema de corrente alternada, possibilitando a transmissão eficiente de energia elétrica em longas distâncias, enquanto Thomas Edison implementou sistemas práticos de geração e distribuição de eletricidade, levando a luz elétrica às cidades. Por fim, no início do século XX, Albert Einstein explicou o efeito fotoelétrico, mostrando que a luz também possui comportamento corpuscular, conectando o eletromagnetismo à física quântica e marcando a transição da física clássica para a física moderna.
+                </p>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-6 pb-40">
+        <div class="mt-32 mb-16 flex flex-col items-center">
+            <h3 class="text-3xl md:text-4xl font-['Syncopate'] text-green-400 uppercase tracking-[0.4em] mb-6 text-center">Linha do Tempo</h3>
+            <div class="w-full h-[6px] bg-gradient-to-r from-transparent via-green-500 to-transparent shadow-[0_0_25px_#22c55e]"></div>
+        </div>
+
+        <div class="timeline-wrapper relative py-20">
+            <div id="timeline-root" class="space-y-32"></div>
+        </div>
+
+        <hr class="mt-48 border-t-[6px] border-green-500 shadow-[0_0_20px_#22c55e] w-full">
+
+        <section id="quiz" class="mt-20 glass-neon p-8 md:p-16 rounded-[4rem] border-[4px] border-green-500/50 shadow-2xl max-w-4xl mx-auto">
+            <div class="flex justify-between items-center mb-12 border-b-4 border-green-500/20 pb-8 gap-6">
+                <h2 class="text-3xl font-['Syncopate'] text-green-500 uppercase italic">Desafio do Eletromagnetismo</h2>
+                <div class="bg-black/50 p-4 rounded-2xl border-[3px] border-green-600/60 min-w-[120px] text-center">
+                    <span class="text-xs uppercase block text-green-400">Pontos</span>
+                    <span id="score-display" class="text-5xl font-bold text-white">0</span>
+                </div>
+            </div>
+            <div id="quiz-container" class="min-h-[400px]"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
